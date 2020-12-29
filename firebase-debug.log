@@ -1,0 +1,60 @@
+[debug] [2020-12-29T18:21:50.813Z] ----------------------------------------------------------------------
+[debug] [2020-12-29T18:21:50.818Z] Command:       /home/rajaram/.nvm/versions/node/v12.16.3/bin/node /home/rajaram/.nvm/versions/node/v12.16.3/bin/firebase init
+[debug] [2020-12-29T18:21:50.819Z] CLI Version:   9.1.0
+[debug] [2020-12-29T18:21:50.819Z] Platform:      linux
+[debug] [2020-12-29T18:21:50.819Z] Node Version:  v12.16.3
+[debug] [2020-12-29T18:21:50.821Z] Time:          Tue Dec 29 2020 23:51:50 GMT+0530 (India Standard Time)
+[debug] [2020-12-29T18:21:50.821Z] ----------------------------------------------------------------------
+[debug] [2020-12-29T18:21:50.821Z] 
+[debug] [2020-12-29T18:21:50.835Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-29T18:21:50.836Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /mnt/c/Users/Raj Pugal/Documents/Work/Angular-App-TODO/todo-app
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2020-12-29T18:22:05.829Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-12-29T18:22:05.830Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-29T18:22:06.375Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 29 Dec 2020 18:21:54 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-12-29T18:22:06.395Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects?pageSize=100  
+ 
+[debug] [2020-12-29T18:22:07.464Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 29 Dec 2020 18:21:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  Using project app-todo-ef6b0 (app-todo) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] ✔  Wrote dist/404.html 
+[debug] [2020-12-29T18:23:02.073Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2020-12-29T18:23:02.868Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2020-12-29T18:23:02.868Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"8.2.1","browserURL":"https://www.gstatic.com/firebasejs/8.2.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/8.2.1/firebase.tgz"},"live":{"version":"8.2","browserURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/8.2/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js","auth":"https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js","database":"https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js","firestore":"https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js","functions":"https://www.gstatic.com/firebasejs/8.2.1/firebase-functions.js","installations":"https://www.gstatic.com/firebasejs/8.2.1/firebase-installations.js","messaging":"https://www.gstatic.com/firebasejs/8.2.1/firebase-messaging.js","storage":"https://www.gstatic.com/firebasejs/8.2.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/8.2.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/8.2.1/firebase-remote-config.js","firestore.memory":"https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.memory.js"}}
+[info] ✔  Wrote dist/index.html 
+[info] 
+[info] i  Detected a .git folder at /mnt/c/Users/Raj Pugal/Documents/Work/Angular-App-TODO/todo-app 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=437318046&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
