@@ -9,13 +9,12 @@ export class TasksService {
   private url="https://app--todo.herokuapp.com/user/dashBoard/viewTasks";
 
   constructor(private http:HttpClient) { }
-  user;
-  viewAllTasks(user){
-    console.log("called");
-    var httpOptions={headers:new HttpHeaders({'Content-Type':'application/json'}),
-    withCredentials:true, 
-    observe: 'response' as 'response'
-  }
-    return this.http.get(this.url,httpOptions);
+  userLogin;
+  userDetails;
+  viewAllTasks(){
+    console.log(this.userLogin," yes");
+    var head=new HttpHeaders();
+  head.set('Access-Control-Allow-Origin', '*');
+    return this.http.post(this.url,this.userLogin,{headers:head});
   }
 }

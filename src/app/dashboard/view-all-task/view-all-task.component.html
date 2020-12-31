@@ -15,14 +15,10 @@
                     <div class="todo-indicator bg-success"></div>
                     <div class="widget-content p-0">
                       <div class="widget-content-wrapper">
-                        <div class="widget-content-left mr-2">
-                          <div class="custom-checkbox custom-control"><input class="custom-control-input"
-                              id="exampleCustomCheckbox10" type="checkbox"><label class="custom-control-label"
-                              for="exampleCustomCheckbox10">&nbsp;</label></div>
-                        </div>
                         <div class="widget-content-left flex2">
-                          <div class="widget-heading">task 1</div>
-                          <div class="widget-subheading">By raj</div>
+                          <div class="widget-heading">{{task.taskName}}</div>
+                          <div class="widget-subheading">Added at {{task.taskAddedTime}}</div>
+                          <div class="widget-subheading">Task Details : {{task.taskDescription}}</div>
                         </div>
                         <div class="widget-content-right"> <button
                             class="border-0 btn-transition btn btn-outline-success"> <i
@@ -39,7 +35,7 @@
           </div>
         </div>
         <div class="d-block text-right card-footer"><button class="mr-2 btn btn-link btn-sm">Cancel</button><button
-            class="btn btn-primary">Add Task</button></div>
+            class="btn btn-primary" (click)="addTasks()">Add Task</button></div>
       </div>
     </div>
   </div>

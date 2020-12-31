@@ -12,16 +12,24 @@ import {TasksService} from './tasks.service';
 export class DashboardComponent  {
 
   constructor(private http:HttpClient,private task:TasksService,private router:Router) {
-     this.task.user=this.router.getCurrentNavigation().extras;
-     console.log(this.task.user);
+     this.task.userLogin=this.router.getCurrentNavigation().extras;
+     console.log(this.task.userLogin,"task user");
    }
-  viewTasks:boolean =false;
+
+  viewTasks:boolean =true;
+  profile:boolean=false;
+  addTask:boolean=false;
   viewAll(){
     this.viewTasks=!this.viewTasks;
+    this.profile=!this.profile;
   }
-  viewProfile(){
-    console.log("profile");
+
+  viewProfile()
+  {
+    this.profile=!this.profile;
+    this.viewTasks=!this.viewTasks;
   }
+
   ngOnInit(): void {
     console.log(2);
   }

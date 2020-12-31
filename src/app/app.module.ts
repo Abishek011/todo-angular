@@ -11,6 +11,8 @@ import { UserComponent } from './user/user.component';
 import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { CommonModule } from '@angular/common';
 import { ViewAllTaskComponent } from './dashboard/view-all-task/view-all-task.component';
+import { ProfileComponent } from './dashboard/profile/profile.component';
+import { AddTaskComponent } from './dashboard/add-task/add-task.component';
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {  
   suppressScrollX: true  
@@ -21,7 +23,9 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AppComponent,
     UserComponent,
     DashboardComponent,
-    ViewAllTaskComponent
+    ViewAllTaskComponent,
+    ProfileComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,

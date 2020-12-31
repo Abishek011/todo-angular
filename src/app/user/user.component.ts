@@ -35,11 +35,6 @@ login() {
   dat;
   onLogIn(form:NgForm){
     var responses;
-    var httpOptions={headers:new HttpHeaders({'Content-Type':'application/json'}),
-    withCredentials:true, 
-    observe: 'response' as 'response',
-  }
-  httpOptions.headers.set('Access-Control-Allow-Origin', '*');
   var head=new HttpHeaders();
   head.set('Access-Control-Allow-Origin', '*');
     console.log(form.value);
@@ -50,7 +45,7 @@ login() {
      this.dat=responses;
      if(responses.dashBoard.emailId.includes(form.value.emailId))
       {
-        this.router.navigate(['user/dashBoard'],responses);
+        this.router.navigate(['user/dashBoard'],form.value);
       }
     },err=>{
       //if(err.error.Message.includes("User already exist"))
@@ -62,15 +57,16 @@ login() {
 
   onSignUp(form:NgForm){
     var responses;
-    var httpOptions=new Headers();
+    var head=new HttpHeaders();
+    head.set('Access-Control-Allow-Origin', '*');
     console.log(form.value);
-    httpOptions.append('Content-Type', 'application/json');
-    this.http.post('https://app--todo.herokuapp.com/user',form.value).subscribe(data=>{
+    this.http.post('https://app--todo.herokuapp.com/user',form.value,{headers:head}).subscribe(data=>{
       responses=data;  
       if(responses.Message.includes("User Created"))
       {
         alert("SignUp successful");
-        this.router.navigate(['user']);
+        console.log(responses);
+        this.onLogIn(form);
       }
     },err=>{
       //if(err.error.Message.includes("User already exist"))
